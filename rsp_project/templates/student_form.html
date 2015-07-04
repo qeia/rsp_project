@@ -1,0 +1,22 @@
+
+
+{% extends 'base.html' %}
+
+
+
+{% block title %}Student Registration Form{% endblock %}
+
+{% block body_block %}
+    <h3>{{ name }}, please fill the relevant details</h3>
+
+    <form id = 'student_form' method = "POST" action="" enctype="multipart/form-data">
+
+        {% csrf_token %}
+            <div class="form-group">
+            {{ form}}</div>
+
+        <input type="submit" name="submit" value="Submit Form" class="btn btn-primary" />
+        </fieldset>
+    </form>
+
+{% endblock %}
