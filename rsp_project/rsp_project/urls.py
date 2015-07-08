@@ -24,4 +24,5 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),url(r'^employee/', views.employee_form, name = "Employee Form"),
     url(r'^confirm/(?P<activation_key>\w+)/', views.student_form),
     url(r'^$', views.startpage),
+
 ]

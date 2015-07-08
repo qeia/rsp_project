@@ -1,21 +1,23 @@
 
+
 {% extends 'base.html' %}
-{% block title %}Employee Registration Form{% endblock %}
+
+
+
+{% block title %}Student Registration Form{% endblock %}
 
 {% block body_block %}
-<form class="form-contact" action="" method="POST">
-{% csrf_token %}
-{% for field in form %}
-<fieldset class="form-group">
-  <label class="control-label" for="id_{{ field.name }}">{{ field.label }}</label>
-      <input type="text" class="form-control"
-        name="{{ field.name }}"
-        id="id_{{ field.name }}"
-         >
-      {{ field.errors }}
 
-</fieldset>
-{% endfor %}
-   <input type="submit" value="Submit"  class="btn btn-primary">
-</form>
+
+    <form id = 'student_form' method = "POST" action="" enctype="multipart/form-data">
+
+        {% csrf_token %}
+            <div class="form-group">
+            {{ form}}</div>
+
+
+        <input type="submit" name="submit" value="Submit Form" class="btn btn-primary" />
+        </fieldset>
+    </form>
+
 {% endblock %}
